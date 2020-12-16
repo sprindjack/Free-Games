@@ -69,7 +69,7 @@ def getGame():
         if not wait_until_xpath_clickable_then_click("//*[text() = 'Get']"):
             raise TypeError("Unable to find 'Get' button")
     except:
-        print("Failed to click on 'Get' button. Using parent element workaround... ", end='')
+        print("Failed to click on 'Get' button. Using parent element workaround... ", end='\n')
         if not wait_until_xpath_clickable_then_click("//*[text() = 'Get']/.."):
             raise TypeError("Workaround failed")
         else:
